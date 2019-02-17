@@ -8,11 +8,36 @@
 </head>
 <body>
 <div id="grid">
+ <input id="night_day" type="button" value="night" onclick="
+    var target= document.querySelector('body');
+    if(this.value === 'night'){
+      target.style.backgroundColor = 'black';
+      target.style.color = 'white';
+      this.value = 'day';
+
+      var alist = document.querySelectorAll('a')
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'powderblue';
+        i = i + 1;
+      }
+    } else {
+      target.style.backgroundColor = 'white';
+      target.style.color = 'black';
+      this.value = 'night';
+
+      var alist = document.querySelectorAll('a')
+      var i = 0;
+      while(i < alist.length){
+        alist[i].style.color = 'blue';
+        i = i + 1;
+      }
+    }
+  ">
   <ul>
-  <u><li><a href="stock.html">주식</a></li>
+  <li><a href="stock.html">주식</a></li>
   <li><a href="develop.html">개발</a></li>
   <li><a href="startup.html">스타트업</a></li>
-</u>
   </ul>
   <div>
       <u><h2 style="margin-top:50px;font-size:20px;text-align:center">여러 관심사를 코딩도 할겸 저장하기</h2></u>
