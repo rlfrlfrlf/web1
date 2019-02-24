@@ -5,35 +5,49 @@
 <link rel="stylesheet" href="style.css">
 <title>interests</title>
 <h1><a href="index.html">관심사 끄적</a></h1>
+<script>
+var Links = {
+  setColor:function (color){
+    var alist = document.querySelectorAll('a')
+    var i = 0;
+    while(i < alist.length){
+      alist[i].style.color = 'powderblue';
+      i = i + 1;
+    }
+}
+var Body = {
+  setColor:function (color){
+    document.querySelector('body').style.color = color;
+  },
+}
+setBackgroundColor:function (color){
+  document.querySelector('body').style.backgroundColor = color;
+}
+}
+function nightDayHandler(self){
+    var target= document.querySelector('body');
+    if(self.value === 'night'){
+      Body.setBackgroundColor('black');
+      Body.setColor('white')
+      self.value = 'day';
+
+      Links.setColor('powderblue')
+    } else {
+      Body.setBackgroundColor('white');
+      Body.setColor('black')
+      self.value = 'night';
+
+      Links.setColor('blue')
+    }
+  }
+</script>
 </head>
 <body>
 <div id="grid">
  <input id="night_day" type="button" value="night" onclick="
-    var target= document.querySelector('body');
-    if(this.value === 'night'){
-      target.style.backgroundColor = 'black';
-      target.style.color = 'white';
-      this.value = 'day';
-
-      var alist = document.querySelectorAll('a')
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = 'powderblue';
-        i = i + 1;
-      }
-    } else {
-      target.style.backgroundColor = 'white';
-      target.style.color = 'black';
-      this.value = 'night';
-
-      var alist = document.querySelectorAll('a')
-      var i = 0;
-      while(i < alist.length){
-        alist[i].style.color = 'blue';
-        i = i + 1;
-      }
-    }
+nightDayHandler(this);
   ">
+
   <ul>
   <li><a href="stock.html">주식</a></li>
   <li><a href="develop.html">개발</a></li>
