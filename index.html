@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>interests-welcome</title>
 <meta charset="utf-8">
 <link rel="stylesheet" href="style.css">
-<title>interests</title>
-<h1><a href="index.html">관심사 끄적</a></h1>
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-<script src="color.js">
-</script>
+<script src="color.js"></script>
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 </head>
 <body>
-<div id="grid">
- <input id="night_day" type="button" value="night" onclick="
-nightDayHandler(this);
-  ">
-
+  <h1><a href="index.html">관심사 끄적</a></h1>
+<div id="button">
+ <input id="night_day" type="button" value="night" onclick="nightDayHandler(this);">
+</div>
+  <div id="grid">
   <ul>
   <li><a href="stock.html">주식</a></li>
   <li><a href="develop.html">개발</a></li>
   <li><a href="startup.html">스타트업</a></li>
   </ul>
-  <div>
-      <u><h2 style="margin-top:50px;font-size:20px;text-align:center">여러 관심사를 코딩도 할겸 저장하기</h2></u>
+    <div id="article">
+      <u><h2 style="margin-top:50px;font-size:20px;text-align:center">잡다한지식</h2></u>
+      <p>평소에 관심있는 사항들을 모아놓아보았습니다. 아직 많이 부족한 개발지식으로 열심히 만들었으니 ㅋㅋㅋ 불편하신점 감안하시고... 더 나은 사이트로 발전하기위해 노력하겠습니다 흑흑</p>
+
   <img src="굳.jpeg" width="40%" class="center">
   <p>special credit to <a href="https://opentutorials.org" target="_blank" title="오픈튜토리얼로 바로가기">오픈튜토리얼</a>
   </p>
   <br><br>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/4OrCA1OInoo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
   <p>
     <div id="disqus_thread"></div>
   <script>

@@ -1,11 +1,8 @@
 body{
   margin:0px;
   align:left;
+  padding:10px;
 }
-a{
-  text-decoration:none;
-}
-
 h1 {
   font-size:40px;
   text-align: center;
@@ -14,13 +11,16 @@ h1 {
   padding-top:40px;
   padding-bottom:30px;
 }
-#grid ul {
-  text-align: left;
-  border-right:1px solid gray;
+ul{
+  border-right:1px solid;
   width:100px;
   margin:0px;
   padding-top:20px;
   padding-bottom:20px;
+}
+#button{
+  padding-left: 40px;
+  padding-top: 10px;
 }
 #grid{
   display: grid;
@@ -30,14 +30,3 @@ h1 {
   #grid{
     display: block;
   }
-  #grid ul {
-    border-right:none;
-    text-decoration: underline;
-  }
-  h1 {
-    border-bottom:none;
-  }
-}
-.article{
-  margin: 20px;
-}
